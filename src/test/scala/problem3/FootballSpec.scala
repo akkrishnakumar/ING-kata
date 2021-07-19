@@ -8,12 +8,16 @@ class FootballSpec extends BaseSpec {
     "Aston Villa should be the team with the smallest 'for' and 'against' difference in given data file"
   ) {
 
-    val dataFile     = "football.bat"
-    val expectedTeam = "Aston_Villa 46 47"
+    val dataFile     = "football.dat"
+    val expectedTeam = FootballData("Aston_Villa", 46, 47)
 
-    val actualTeam: String = ""
+    def smallestDifference(data: FootballData) = Math.abs(data.againstGoals - data.forGoals)
+
+    val actualTeam =
+      FindSmallest[FootballData](smallestDifference)(Ripper[FootballData](dataFile))
 
     actualTeam shouldEqual expectedTeam
 
   }
+
 }
