@@ -7,7 +7,7 @@ import java.util.ArrayDeque
 class ConsolePrinterSpec extends BaseSpec {
 
   val outputStream = new ArrayDeque[String]()
-  val console      = new ConsolePrinter({ outputStream.push(_) })
+  val console      = ConsolePrinter({ outputStream.push(_) })
 
   test("Print n numbers to the console") {
     val expected = "1,2,3,4,5,6,7,8,9,10"
