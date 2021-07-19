@@ -1,0 +1,2 @@
+# ING-kata
+ING kata
