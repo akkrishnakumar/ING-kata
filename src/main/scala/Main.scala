@@ -1,4 +1,5 @@
 import problem1.ConsolePrinter
+import problem2.Triangle
 object Main extends App {
 
   println("=" * 100)
@@ -10,6 +11,14 @@ object Main extends App {
 
   printer.print(input.mkString(","))
   print("\n")
+
+  println("=" * 100)
+
+  println("Problem 2")
+
+  val triangle = new Triangle(10, 10)
+
+  println(s"Area of Triangle with base 10 and height 10 is ${triangle.area}")
 
   println("=" * 100)
 
